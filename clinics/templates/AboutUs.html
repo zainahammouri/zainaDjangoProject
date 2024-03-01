@@ -1,0 +1,43 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- CSS Welcome Link -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/Welcome.css'%}">
+    <!-- CSS Home Link -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/Home.css' %}">
+    <!-- CSS AboutUs Linke -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/AboutUs.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <h1 class="title">Zaina Clinic</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a  href="{% url 'homepage' %}" >Home</a></li>
+            <li> <a href="{% url 'contactus' %}" >Contact</a></li>
+            <li><a href="{% url 'aboutus' %}" >About</a></li>
+            <li><a href="{% url 'indexpage' %}" >LogOut</a></li>
+        </ul>
+    </div>
+    <!-- About Us Code -->
+    <div class="profile">
+        <img src="{% static 'image/Me profile.jpg' %}" alt="Profile image">
+        <div class="profilediv">
+            <h3>Zaina</h3>
+            <p>Software Engineering at JUST</p>
+        </div>
+     </div>
+    
+    <!-- Creat A Footer -->
+<footer class="f">
+    <p>Copy Right &copy; 2023</p>
+    <p>Disigned by <a href="">Zaina Hammouri</a></p>
+</footer>
+    
+</body>
+</html>

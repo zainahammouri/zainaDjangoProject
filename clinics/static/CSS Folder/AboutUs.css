@@ -1,0 +1,28 @@
+/* Styling AboutUs */
+ /* Style img ,h3 and p tages */
+.profile{
+    height: 200px;
+}
+.profile>img{
+    float: left;
+    margin-left: 15%;
+    width: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+}
+.profilediv{
+    float: right;
+    margin-right: 40%;
+    margin-top: 40px;
+    
+}
+.profilediv>h3, .profilediv>p{
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #c4c7c9;
+    text-shadow: 1px 1px 1px #fff;
+
+}

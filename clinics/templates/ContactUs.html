@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <!-- CSS Welcome Link -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/Welcome.css' %}">
+    <!-- CSS Home Link -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/Home.css' %}">
+    <!-- CSS ContactUs Link -->
+    <link rel="stylesheet" href="{% static 'CSS Folder/ContactUs.css' %}">
+</head>
+<body>
+    <!-- Header -->
+    <h1 class="title">Zaina Clinic</h1>
+    <!-- Navbar -->
+    <div class="navbar">
+        <ul>
+            <li><a  href="{% url 'homepage' %}" >Home</a></li>
+            <li> <a href="{% url 'contactus' %}" >Contact</a></li>
+            <li><a href="{% url 'aboutus' %}" >About</a></li>
+            <li><a href="{% url 'indexpage' %}" >LogOut</a></li>
+        </ul>
+    </div>
+    <!-- Contact Form -->
+    <div class="contactform">
+        <h2>Contact Us</h2>
+        <form id="sb" method="post" action="{% url 'contactus' %}">
+            {% csrf_token %}
+           <label for="name">Name</label>
+           <input type="text" id="name">
+           <label for="email">Email</label>
+           <input type="text" id="email">
+           <label for="message">Message</label>
+           <textarea id="message"></textarea>
+           <input type="submit" value="Submit"  onclick="Alert()">
+           <input type="reset" value="Reset">
+        </form>
+   </div>
+    
+    <!-- Creat A Footer -->
+<footer class="f">
+    <p>Copy Right &copy; 2023</p>
+    <p>Disigned by <a href="">Zaina Hammouri</a></p>
+</footer>
+
+<!-- Sweet Alert link  -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- ContactUs JS Link -->
+    <script src="{% static 'JS Folder/ContactUs.js' %}"></script>
+    
+</body>
+</html>
